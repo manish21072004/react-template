@@ -80,9 +80,10 @@ function Header() {
                   <Nav.Link href="#blog">Blog</Nav.Link>
                   <Nav.Link href="#contacts">Contacts</Nav.Link>
                 </div>
-
+                 <div className="button">
                 <Button className="get-btn">Get in Touch</Button>
                 <Button className="dealer-btn">Become a Dealer</Button>
+                </div>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

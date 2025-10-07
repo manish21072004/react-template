@@ -1747,6 +1747,9 @@ input[type="text"] {
   .sec-8-heading p {
     font-size: 16px;
   }
+      .sec-8-containt h3 {
+        font-size: 22px;
+    }
 
   .sec-8-containt {
     flex-direction: column;
@@ -1875,16 +1878,16 @@ input[type="text"] {
   .naveb {
     gap: 10px;
     flex-wrap: wrap;
+    flex-direction: column;
   }
 
-  .get-btn,
-  .dealer-btn,
   .navbar .btn {
     display: none !important; /* hide navbar buttons */
   }
 
   a.nav-link {
-    font-size: 20px;
+    font-size: 16px;
+    font-weight: 100;
   }
 
   div#offcanvasNavbar-expand-false {
@@ -1893,6 +1896,15 @@ input[type="text"] {
 .nav-image img {
     margin-left: 54%;
     width: 58%;
+}
+.dealer-btn {
+    margin-top: 8%;
+    margin-left: 30px;
+}
+
+.get-btn {
+    margin-top: 6%;
+    margin-left: 28px;
 }
 
   /* 🔹 Banner */
@@ -1950,6 +1962,13 @@ input[type="text"] {
     margin-left: 0;
     font-size: 22px;
   }
+
+  .sec-10 button.btn.btn-primary {
+    font-size: 20px;
+    padding: 11px 4px;
+    margin-left: 0px !important;
+    width: 100%;
+}
 
   /* 🔹 Footer */
   .footer-main {

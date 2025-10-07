@@ -37,6 +37,17 @@ import Test1 from "../assets/image/1751275942.png";
 import Test2 from "../assets/image/1751275921.png";
 import Test3 from "../assets/image/1751275903.png";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
+
+
+
+
+
+
 const logos = [
   Client1,
   Client2,
@@ -282,41 +293,53 @@ function Banner() {
       </section>
 
       {/* section 8 */}
-      <section className='sec-8'>
-        <div className='sec-8-heading'>
+     <section className="sec-8">
+      <Container>
+        <div className="sec-8-heading">
           <h2>Commitment to the Environment</h2>
           <p>
             Every Schon product is a testament to our dedication to environmental
             stewardship.
           </p>
         </div>
-        <div className='sec-8-containt'>
-        <Row>
-          <Col lg={4} md={6}>
-          <div className='sec-8-icon'>
-            <img src={SustainIcon10} alt="" />
-            <h3>Sustainable Living</h3>
-            <p>Products that reduce your environmental footprint.</p>
-          </div>
-          </Col>
-          <Col lg={4} md={6}>
-          <div className='sec-8-icon'>
-            <img src={SustainIcon11} alt="" />
-            <h3>Future-Proof Innovation</h3>
-            <p>Designs that meet global sustainability standards.</p>
-          </div>
-          </Col>
-           <Col lg={4} md={6}>
-          <div className='sec-8-icon'>
-            <img src={SustainIcon12} alt="" />
-            <h3>A Greener Tomorrow</h3>
-            <p>Supporting a brand committed to eco-conscious change.</p>
-          </div>
-          </Col>
-          </Row>
-        </div>
-      </section>
 
+        <div className="sec-8-containt">
+          <Swiper
+            spaceBetween={30}
+            pagination={{ clickable: true }}
+            breakpoints={{
+              0: { slidesPerView: 1 },       // mobile view
+              576: { slidesPerView: 2 },     // tablet
+            
+            }}
+          >
+            <SwiperSlide>
+              <div className="sec-8-icon">
+                <img src={SustainIcon10} alt="Sustainable Living" />
+                <h3>Sustainable Living</h3>
+                <p>Products that reduce your environmental footprint.</p>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="sec-8-icon">
+                <img src={SustainIcon11} alt="Future-Proof Innovation" />
+                <h3>Future-Proof Innovation</h3>
+                <p>Designs that meet global sustainability standards.</p>
+              </div>
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="sec-8-icon">
+                <img src={SustainIcon12} alt="A Greener Tomorrow" />
+                <h3>A Greener Tomorrow</h3>
+                <p>Supporting a brand committed to eco-conscious change.</p>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </Container>
+    </section>
       {/* section 9 */}
       <div className="sec-9-bg">
         <div className="sec-9">
@@ -380,79 +403,91 @@ function Banner() {
 
       {/* section 11 */}
       <section className="Testmonial-part">
-        <Container>
-          <div className="testmonial-heading">
-            <h2>Built on Trust. Chosen by Experts</h2>
-          </div>
-          <Row className='sec-11-row'style={{cursor:'grab'}}>
-            <Col lg={4} md={12}>
-              <div className="main-sec-testM">
-                <div className="test-monial-icon">
-                  <img src={Testo} alt="icon" />
-                </div>
-                <div className="test-monial-para">
-                  <p>
-                   We partnered with Schon Doorways for a 120-apartment 
-                   premium housing project. Their scale of production, delivery 
-                   timelines, and on-site coordination made them a reliable execution partner. 
-                   It’s rare to find a vendor that delivers both product quality and project efficiency.
-                  </p>
-                </div>
-                <div className="test-monial-block">
-                  <img className="test-img" src={Test1} alt="client" />
-                  <div className="test-cont">
-                    <h3>Nikhil Shetty</h3>
-                    <span>Principal Architect</span>
-                  </div>
+      <Container>
+        <div className="testmonial-heading">
+          <h2>Built on Trust. Chosen by Experts</h2>
+        </div>
+
+        {/* ✅ Swiper starts here */}
+        <Swiper
+          spaceBetween={30}
+          pagination={{ clickable: true }}
+          breakpoints={{
+            0: { slidesPerView: 1 },       // mobile
+            768: { slidesPerView: 2 },     // tablet
+            1100: { slidesPerView: 2 },    // desktop (shows 3 cards)
+          }}
+        >
+          {/* Slide 1 */}
+          <SwiperSlide>
+            <div className="main-sec-testM">
+              <div className="test-monial-icon">
+                <img src={Testo} alt="icon" />
+              </div>
+              <div className="test-monial-para">
+                <p>
+                  We partnered with Schon Doorways for a 120-apartment 
+                  premium housing project. Their scale of production, delivery 
+                  timelines, and on-site coordination made them a reliable 
+                  execution partner.
+                </p>
+              </div>
+              <div className="test-monial-block">
+                <img className="test-img" src={Test1} alt="client" />
+                <div className="test-cont">
+                  <h3>Nikhil Shetty</h3>
+                  <span>Principal Architect</span>
                 </div>
               </div>
-            </Col>
-            <Col lg={4} md={12}>
-              <div className="main-sec-testM">
-                <div className="test-monial-icon">
-                  <img src={Testo} alt="icon" />
-                </div>
-                <div className="test-monial-para">
-                  <p>
-                   What sets Schon apart is their understanding of architectural vision. 
-                   I needed custom aluminium systems for a minimalist villa project, and 
-                   they executed every detail with precision. Their ability to handle complex 
-                   briefs while maintaining design integrity is unmatched.
-                  </p>
-                </div>
-                <div className="test-monial-block">
-                  <img className="test-img" src={Test2} alt="client" />
-                  <div className="test-cont">
-                    <h3>Anitha Rao</h3>
-                    <span>Homeowner</span>
-                  </div>
+            </div>
+          </SwiperSlide>
+
+          {/* Slide 2 */}
+          <SwiperSlide>
+            <div className="main-sec-testM">
+              <div className="test-monial-icon">
+                <img src={Testo} alt="icon" />
+              </div>
+              <div className="test-monial-para">
+                <p>
+                  What sets Schon apart is their understanding of architectural vision. 
+                  They executed every detail with precision, maintaining design integrity.
+                </p>
+              </div>
+              <div className="test-monial-block">
+                <img className="test-img" src={Test2} alt="client" />
+                <div className="test-cont">
+                  <h3>Anitha Rao</h3>
+                  <span>Homeowner</span>
                 </div>
               </div>
-            </Col>
-             <Col lg={4} md={12}>
-              <div className="main-sec-testM">
-                <div className="test-monial-icon">
-                  <img src={Testo} alt="icon" />
-                </div>
-                <div className="test-monial-para">
-                  <p>
-                   From consultation to installation, the experience with 
-                   Schon Doorways was seamless. Their team helped us choose 
-                   the right doors and windows for our villa, and the quality speaks for itself—solid, sleek, and truly premium. I finally feel like I’ve built a home that will last generations.
-                  </p>
-                </div>
-                <div className="test-monial-block">
-                  <img className="test-img" src={Test3} alt="client" />
-                  <div className="test-cont">
-                    <h3>Karan Mehta</h3>
-                    <span>Director</span>
-                  </div>
+            </div>
+          </SwiperSlide>
+
+          {/* Slide 3 */}
+          <SwiperSlide>
+            <div className="main-sec-testM">
+              <div className="test-monial-icon">
+                <img src={Testo} alt="icon" />
+              </div>
+              <div className="test-monial-para">
+                <p>
+                  From consultation to installation, Schon Doorways provided 
+                  excellent service. The quality speaks for itself—solid, sleek, and premium.
+                </p>
+              </div>
+              <div className="test-monial-block">
+                <img className="test-img" src={Test3} alt="client" />
+                <div className="test-cont">
+                  <h3>Karan Mehta</h3>
+                  <span>Director</span>
                 </div>
               </div>
-            </Col>
-          </Row>
-        </Container>
-      </section>
+            </div>
+          </SwiperSlide>
+        </Swiper>
+      </Container>
+    </section>
     </>
   )
 }
