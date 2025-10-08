@@ -11,7 +11,7 @@ function Footer() {
   <Row>
     <Col lg={3} md={6}>
     <div className='footer-schon'>
-        <img src={sidelogo} alt="menu" className='footer-icon' />
+        <img src="src\assets\image\logo (1).png" alt="" className='footer-icon' />
     </div>
     <div className='footer-para-1'>
         <p>India’s trusted name in premium aluminium doors and windows, blending world-class German engineering with refined Indian craftsmanship.</p>
