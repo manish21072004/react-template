@@ -310,7 +310,7 @@ function Banner() {
             breakpoints={{
               0: { slidesPerView: 1 },       // mobile view
               576: { slidesPerView: 2 },     // tablet
-            
+              1200: {slidesPerView: 3},
             }}
           >
             <SwiperSlide>
@@ -416,6 +416,7 @@ function Banner() {
             0: { slidesPerView: 1 },       // mobile
             768: { slidesPerView: 2 },     // tablet
             1100: { slidesPerView: 2 },    // desktop (shows 3 cards)
+             1200: { slidesPerView: 3 },
           }}
         >
           {/* Slide 1 */}

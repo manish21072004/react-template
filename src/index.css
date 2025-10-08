@@ -501,9 +501,13 @@ input[type="text"] {
   font-size: 40px;
   font-family: "Playfair", serif;
 }
-.test-monial-para p{
-   font-family: "DM Sans", sans-serif;
+.test-monial-para p {
+    font-family: "DM Sans", sans-serif;
     font-weight: 300;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 .test-img{
   width: 26%;
@@ -584,19 +588,7 @@ input[type="text"] {
     color: #f5f4f4;
     text-decoration: none;
 }
-/* .footer-existence h4 {
-    font-size: 16px;
-    font-family: emoji;
-}
-.footer-existence h6 {
-    font-size: 16px;
-    font-family: monospace;
-}
-.footer-existence h5 {
-    font-size: 16px;
-    font-family: fangsong;
-    line-height: revert;
-} */
+
 .Quick-Links-3{
     color: white;
 }
